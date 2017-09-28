@@ -8,9 +8,6 @@ module.exports = function(sequelize, DataTypes){
 		},
 		status: {
 			type: DataTypes.STRING,
-		},
-		userID: {
-			type: DataTypes.STRING
 		}
 	},
 	    {

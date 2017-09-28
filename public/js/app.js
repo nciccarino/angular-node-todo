@@ -1,8 +1,6 @@
-var app = angular.module('todolist', [])
+angular.module('todolist', [])
 
-app.config(function($routeProvider) {
-  console.log("route provider hit")
-};
+.config(function($routeProvider) {
 
   $routeProvider
     .when('/', {
@@ -22,7 +20,7 @@ app.config(function($routeProvider) {
     });
 })
 
-app.controller('listController', function($scope, $http) {
+.controller('listController', function($scope, $http) {
   $scope.data = []; 
   var request = $http.get("/data");
   request.success(function(data){
@@ -31,18 +29,18 @@ app.controller('listController', function($scope, $http) {
   request.error(function(data) {
     console.log("Error: " + data); 
   }); 
-}); //listController
+}) //listController
 
-app.controller('newTaskController', function($location, $http) {
+.controller('newTaskController', function($location, $http) {
   var editInfo = this;
   editInfo.save = function() {
     $http.post("/newtask/").then(function(data) {
       $location.path('/');
     });
   };
-}); //newTaskController
+}) //newTaskController
 
-app.controller('editTaskController', function($location, $http, $routeParams) {
+.controller('editTaskController', function($location, $http, $routeParams) {
   var editInfo = this;
   var taskId = $routeParams.id;
   editInfo.destroy = function() {
@@ -56,4 +54,4 @@ app.controller('editTaskController', function($location, $http, $routeParams) {
       $location.path('/');
     });
   };
-}); //editTaskController
+}) //editTaskController

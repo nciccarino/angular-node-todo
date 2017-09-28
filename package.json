@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/nciccarino/angular-todo#readme",
   "dependencies": {
+    "@angular/cli": "^1.4.3",
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.18.2",
     "express": "^4.15.5",
