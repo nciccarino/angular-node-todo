@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes){
-	var Todo = sequelize.define("Todo", {
+	var Task = sequelize.define("Task", {
 		title: {
 			type: DataTypes.STRING,
 		},
@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes){
 	    {
       classMethods: {
         associate: function(models) {
-          Todo.belongsTo(models.User, {
+          Task.belongsTo(models.User, {
             foreignKey: {
               allowNull: false
             }
@@ -25,5 +25,5 @@ module.exports = function(sequelize, DataTypes){
       }
     }
 	);
-	return Todo;
+	return Task;
 }
