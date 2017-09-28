@@ -33,10 +33,10 @@ app.controller('listController', function($scope, $http) {
   }); 
 }); //listController
 
-app.controller('newTaskController', function($location, $http, $routeParams) {
+app.controller('newTaskController', function($location, $http) {
   var editInfo = this;
   editInfo.save = function() {
-    $http.post("/newtask/" + $routeParams).then(function(data) {
+    $http.post("/newtask/").then(function(data) {
       $location.path('/');
     });
   };

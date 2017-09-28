@@ -1,4 +1,4 @@
-//Requiring models directory, our passport configuration, and imdb-api package
+//Requiring models directory and our passport configuration
 var db = require('../models');
 var passport = require("../config/passport");
 
