@@ -1,0 +1,27 @@
+<form name="form">
+  <div class="control-group" ng-class="{error: form.title.$invalid && !form.title.$pristine}">
+    <label>Title</label>
+    <input type="text" name="title" ng-model="editInfo.form.title" required>
+    <span ng-show="form.title.$error.required && !form.title.$pristine" class="help-inline">Required {{form.title.$pristine}}</span>
+  </div>
+
+  <div class="control-group" ng-class="{error: form.text.$invalid && !form.text.$pristine}">
+    <label>Description</label>
+    <input type="textarea" rows= '5' name="text" ng-model="editInfo.form.text" required>
+    <span ng-show="form.text.$error.required && !form.text.$pristine" class="help-inline">Required</span>
+  </div>
+
+  <div class="form-group">
+    <label for="changeCategory">Status</label>
+    <select class="form-control" name="changeCategory">
+      <option value= "future">Not Started</option>
+      <option value= "current">Still Working</option>
+      <option value="suspended">Stopped for Now</option>
+      <option value ="finished">Finished</option>
+    </select>
+  </div>
+
+  <a href="#/" class="btn">Cancel</a>
+  <button ng-click="editInfo.save()" ng-disabled="form.$invalid" class="btn btn-primary">Save</button>
+  <button ng-click="editInfo.destroy()" ng-show="editInfo.form.$id" class="btn btn-danger">Delete</button>
+</form>
