@@ -12,7 +12,7 @@ module.exports= function(app){
 		})
 	});
 
-	app.post("/newtask/:", function(req, res) {
+	app.post("/newtask/", function(req, res) {
 		console.log(req.body);
 		db.Task.create({
 			title: req.body.title,

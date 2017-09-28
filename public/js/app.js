@@ -45,7 +45,6 @@ app.controller('newTaskController', function($location, $http) {
 app.controller('editTaskController', function($location, $http, $routeParams) {
   var editInfo = this;
   var taskId = $routeParams.id;
-
   editInfo.destroy = function() {
     $http.delete("/delete/" + taskId).then(function(data) {
       $location.path('/');
