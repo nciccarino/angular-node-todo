@@ -1,0 +1,33 @@
+{
+  "name": "angular-todo",
+  "version": "1.0.0",
+  "description": "AngularJs to do list with NodeJs/Express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nciccarino/angular-todo.git"
+  },
+  "author": "Nick Ciccarino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nciccarino/angular-todo/issues"
+  },
+  "homepage": "https://github.com/nciccarino/angular-todo#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
+    "express-session": "^1.15.6",
+    "mysql": "^2.14.1",
+    "mysql2": "^1.4.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "sequelize": "^4.11.1",
+    "sequelize-cli": "^3.0.0"
+  }
+}
